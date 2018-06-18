@@ -17,7 +17,7 @@ sudo apt-get install ruby-full -y
 sudo /opt/puppetlabs/puppet/bin/gem install aws-sdk retries
 
 echo export PATH=/opt/puppetlabs/bin:$PATH >> ~/.bashrc
-source .bashrc
+source ~/.bashrc
 
 #change install directory here?????
 puppet module install puppetlabs-aws
@@ -31,6 +31,6 @@ echo aws_secret_access_key = your_secret_access_key >> ~/.aws/credentials
 echo export AWS_REGION=us-east-1 >> ~/.bashrc
 #if proxy is used setup with line below before execution of this script:
 #echo export PUPPET_AWS_PROXY=http://localhost:8888 >> ~/.bashrc
-source .bashrc
+source ~/.bashrc
 
 puppet apply deploy-infra/deploy.pp
